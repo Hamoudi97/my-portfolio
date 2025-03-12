@@ -1,4 +1,9 @@
 /* General Styles */
+:root{
+    --button-color: #3010be;
+    --botton-hover: #1e0969;
+}
+
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
@@ -75,4 +80,69 @@ footer {
         padding: 10px;
         margin: 10px;
     }
+}
+
+.project{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.show-btn{
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.show-btn:hover{
+background-color:var(--botton-hover);
+}
+
+.project-details{
+    padding: 10px;
+    margin-top: 8px;
+    background-color: #f9f7f7;
+    border-left: 3px solid var(--button-color);
+    border-right: 3px solid var(--button-color);
+    border-radius: 3px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"], textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cac8c8;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+textarea{
+    height: 150px;
+    resize: none;
+}
+
+button[type="submit"]{
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover{
+    background-color: var(--botton-hover);
 }

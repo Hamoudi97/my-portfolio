@@ -112,6 +112,7 @@ background-color:var(--botton-hover);
     border-left: 3px solid var(--button-color);
     border-right: 3px solid var(--button-color);
     border-radius: 3px;
+    display: none;
 }
 
 form{

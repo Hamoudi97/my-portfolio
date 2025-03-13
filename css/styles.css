@@ -20,6 +20,10 @@ header {
     text-align: center;
 }
 
+header h1 {
+    margin-right: 20px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -31,7 +35,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(210, 206, 206);
     text-decoration: none;
     font-weight: bold;
 }
@@ -49,6 +53,10 @@ section {
 }
 
 h2 {
+    color: #1c0d60;
+}
+
+h3 {
     color: #1c0d60;
 }
 

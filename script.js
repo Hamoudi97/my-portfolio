@@ -57,7 +57,10 @@ function formValidation() {
 
         if (isValid) {
             submitMessage.textContent = "Your message has been sent! ✅"
-            form.reset();
+            setTimeout(()=> {
+                form.reset();
+                submitMessage.textContent = "";
+            }, 7000);
         }
 
         event.preventDefault();

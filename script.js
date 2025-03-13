@@ -13,6 +13,7 @@ const submitMessage = document.getElementById("submitMessage")
 document.addEventListener("DOMContentLoaded", function () {
     projectToggle();
     formValidation();
+    liveFormValidation();
 })
 
 function projectToggle() {
@@ -70,4 +71,11 @@ function formValidation() {
 function validateEmail(email){
     const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return re.test(String(email));
+}
+
+
+function liveFormValidation(){
+    nameInput.addEventListener("input", () => nameError.textContent = "")
+    emailInput.addEventListener("input", () => emailError.textContent = "")
+    messageInput.addEventListener("input", () => messageError.textContent = "")
 }

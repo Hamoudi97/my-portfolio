@@ -35,7 +35,6 @@ function projectToggle() {
 
 function formValidation() {
     form.addEventListener("submit", function (event) {
-        console.log("Form Submitted!");
 
         nameError.textContent = "";
         emailError.textContent = "";
@@ -63,11 +62,17 @@ function formValidation() {
         }
 
         if (isValid) {
+            console.log("Form Submitted!");
+
+            let submitButton = form.querySelector("button[type='submit'")
+            submitButton.disabled = true;
+
             submitMessage.textContent = "Your message has been sent! ✅"
             setTimeout(() => {
                 form.reset();
                 submitMessage.textContent = "";
-            }, 7000);
+                submitButton.disabled = false;
+            }, 5000);
         }
 
         event.preventDefault();

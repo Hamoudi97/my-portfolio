@@ -253,6 +253,7 @@ textarea {
   font-family: inherit;
   font-size: 16px;
   transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -431,21 +432,24 @@ footer p {
 }
 
 /* Media Queries for Mobile Devices */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   header,
   footer {
     padding: 10px;
   }
 
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
   nav ul li {
-    display: block;
-    text-align: center;
-    margin: 5px 0;
+    margin: 8px 0;
   }
 
   section {
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    margin: 12px;
   }
   .theme-switch-dark {
     position: relative;
@@ -453,5 +457,9 @@ footer p {
     top: 5px;
     right: 0;
     margin-top: 10px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }

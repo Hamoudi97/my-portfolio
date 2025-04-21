@@ -3,6 +3,7 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 const projectButtons = document.querySelectorAll(".show-btn");
+const skillBars = document.querySelectorAll(".skill-bar");
 
 const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupDarkMode();
   setupSmoothScroll();
   setupLazyLoading();
+  animateSkillBars();
   new Typed("#typed-text", {
     strings: ["a Student.", "a Gamer.", "a Foodie.", "a Web Developer."],
     typeSpeed: 40,
@@ -171,4 +173,13 @@ function setupLazyLoading() {
       img.removeAttribute("data-src");
     });
   }
+}
+
+function animateSkillBars() {
+  setTimeout(() => {
+    skillBars.forEach((bar) => {
+      const percentage = bar.getAttribute("data-percentage");
+      bar.style.width = percentage + "%";
+    });
+  }, 350);
 }

@@ -90,11 +90,12 @@ nav ul li a:hover {
 }
 
 section {
-  padding: 20px;
-  margin: 20px;
-  background-color: var(--section-bg);
-  border-radius: 5px;
-  box-shadow: 0 0 10px var(--section-shadow);
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 1000px;
+  background-color: var(--section-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--section-shadow);
   animation: fadeIn 0.6s ease-out;
 }
 
@@ -140,7 +141,7 @@ footer {
 }
 
 .project {
-  background-color: var(--project-bg);
+  background-color: var(--project-background);
   padding: 15px;
   border-radius: 4px;
   margin-bottom: 15px;
@@ -311,7 +312,7 @@ input:checked + .slider-round:before {
 .project-details {
   padding: 15px;
   margin-top: 8px;
-  background-color: var(--project-details-bg);
+  background-color: var(--project-details-background);
   border-left: 3px solid var(--button-color);
   border-right: 3px solid var(--button-color);
   border-radius: 3px;

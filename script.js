@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupLazyLoading();
   animateSkillBars();
   new Typed("#typed-text", {
-    strings: ["a Student.", "a Gamer.", "a Foodie.", "a Web Developer."],
+    strings: ["a Student", "a Gamer", "a Foodie", "a Web Developer"],
     typeSpeed: 40,
     showCursor: false,
     startDelay: 250,

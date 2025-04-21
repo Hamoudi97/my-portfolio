@@ -16,16 +16,17 @@
 }
 
 [data-theme="dark"] {
-  --background-color: #131313;
+  --background-color: #121212;
   --text-color: #e0e0e1;
   --section-background: #1e1e1e;
   --section-shadow: rgba(0, 0, 0, 0.3);
   --project-background: #2d2d2d;
-  --project-details-background: #302f2f;
-  --header-footer-background: #2c0a0a;
+  --project-details-background: #2a3747;
+  --header-footer-background: linear-gradient(135deg, #3a0ca3, #4361ee);
   --header-footer-text: #f0f0f0;
   --nav-link-color: #d6d6d6;
-  --heading-color: #8b7fce;
+  --heading-color: #4cc9f0;
+  --accent-color: #f72585;
 }
 
 body {

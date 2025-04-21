@@ -13,6 +13,7 @@
   --header-footer-text: white;
   --nav-link-color: rgb(228, 228, 228);
   --heading-color: #3a0ca3;
+  --accent-color: #f72585;
 }
 
 [data-theme="dark"] {
@@ -112,6 +113,16 @@ h2 {
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 3px;
+  background-color: var(--accent-color);
+  bottom: -6px;
+  left: 0;
 }
 
 /* Media Queries for Mobile Devices */
@@ -421,4 +432,9 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.highlight {
+  color: var(--accent-color);
+  font-weight: bold;
 }

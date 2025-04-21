@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   liveFormValidation();
   setupDarkMode();
   setupSmoothScroll();
+  setupLazyLoading();
   new Typed("#typed-text", {
     strings: ["a Student.", "a Gamer.", "a Foodie.", "a Web Developer."],
     typeSpeed: 40,
@@ -135,4 +136,31 @@ function setupSmoothScroll() {
       }
     });
   });
+}
+
+function setupLazyLoading() {
+  if ("IntersectionObserver" in window) {
+    const lazyImages = document.querySelectorAll("img[data-src]");
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute("data-src");
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach((img) => {
+      imageObserver.observe(img);
+    });
+  } else {
+    const lazyImages = document.querySelectorAll("img[data-src]");
+    lazyImages.forEach((img) => {
+      img.src = img.dataset.src;
+      img.removeAttribute("data-src");
+    });
+  }
 }

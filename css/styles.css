@@ -108,6 +108,13 @@ footer {
     padding: 10px;
     margin: 10px;
   }
+  .theme-switch-dark {
+    position: relative;
+    justify-content: center;
+    top: 5px;
+    right: 0;
+    margin-top: 10px;
+  }
 }
 
 .project {
@@ -199,4 +206,53 @@ button[type="submit"]:hover {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+.theme-label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: var(--header-footer-text);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 50px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider-round {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+  border-radius: 34px;
+}
+
+.slider-round:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 16px;
+  border-radius: 34px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 16px;
+}
+
+input:checked + .slider-round {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider-round:before {
+  transform: translateX(27px);
 }

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   formValidation();
   liveFormValidation();
   setupDarkMode();
+  setupSmoothScroll();
   new Typed("#typed-text", {
     strings: ["a Student.", "a Gamer.", "a Foodie.", "a Web Developer."],
     typeSpeed: 40,
@@ -116,5 +117,22 @@ function setupDarkMode() {
       document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
     }
+  });
+}
+
+function setupSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 20,
+          behavior: "smooth",
+        });
+      }
+    });
   });
 }

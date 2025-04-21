@@ -178,17 +178,17 @@ footer {
   background-color: var(--button-color);
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 8px 15px;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
 }
 
 .show-btn:hover {
   background-color: var(--button-hover);
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
 form {

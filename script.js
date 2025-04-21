@@ -147,6 +147,10 @@ function setupLazyLoading() {
         if (entry.isIntersecting) {
           const img = entry.target;
           img.src = img.dataset.src;
+
+          img.onload = function () {
+            img.classList.add("loaded");
+          };
           img.removeAttribute("data-src");
           imageObserver.unobserve(img);
         }
@@ -160,6 +164,10 @@ function setupLazyLoading() {
     const lazyImages = document.querySelectorAll("img[data-src]");
     lazyImages.forEach((img) => {
       img.src = img.dataset.src;
+
+      img.onload = function () {
+        img.classList.add("loaded");
+      };
       img.removeAttribute("data-src");
     });
   }

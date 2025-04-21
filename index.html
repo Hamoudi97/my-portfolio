@@ -12,23 +12,26 @@
   <body>
     <!-- Header Section -->
     <header>
-      <h1>Ahmed Rahim</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+      <div class="header-content">
+        <h1>Ahmed Rahim</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    <div class="theme-switch-dark">
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider-round"></div>
-      </label>
-      <span class="theme-label">Dark Mode</span>
-    </div>
+      <div class="theme-switch-dark">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider-round"></div>
+        </label>
+        <span class="theme-label">Dark Mode</span>
+      </div>
+    </header>
 
     <!-- About Section -->
     <section id="about">
@@ -39,103 +42,165 @@
         program at Humber. I'm working on building a website portfolio using
         HTML, JavaScript, CSS, and other web technologies. My interests include
         working out, reading books, playing video games, playing chess, and
-        tasting different foods. My computer programming journey has been
+        tasting different foods.
+      </p>
+      <p>
+        My <span class="highlight">computer programming journey</span> has been
         exciting, and it's just beginning. My goal is to become a skilled
         developer and create functional, user-friendly applications.
       </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>My Skills</h2>
+
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Frontend Development</h3>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>HTML5</span>
+              <span>60%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="60"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>CSS3</span>
+              <span>50%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="50"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>JavaScript</span>
+              <span>45%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="45"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & Technologies</h3>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Git/GitHub</span>
+              <span>55%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="55"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
       <h2>My Projects</h2>
 
-      <div class="project">
-        <h3>My Portfolio</h3>
-        <button class="show-btn">Show Details</button>
-        <div class="project-details">
-          <p>
-            A portfolio website showcasing my skills, work, and projects using
-            HTML, CSS, and JavaScript.
-          </p>
-        </div>
-      </div>
-
-      <div class="project" data-category="web">
-        <h3>Dynamic Blog Website</h3>
-        <button class="show-btn">Show Details</button>
-        <div class="project-details">
-          <div class="project-image">
-            <img
-              src="images\placeholder-image.png"
-              data-src="images\Blog-website-ss.png"
-              alt="Dynamic Blog Website"
-              class="lazy-image"
-            />
+      <div class="projects-grid">
+        <div class="project">
+          <div class="project-header">
+            <h3>My Portfolio</h3>
           </div>
-          <p>Full-featured blog platform with:</p>
-          <ul>
-            <li>Create/edit/delete posts</li>
-            <li>Image uploads (drag-drop or paste)</li>
-            <li>Mobile-responsive design</li>
-            <li>Local storage for data persistence</li>
-            <li>Post previews and date tracking</li>
-          </ul>
-          <p>
-            Built with vanilla JavaScript and CSS. Handles image compression and
-            browser storage limits. Features form validation and error handling.
-          </p>
-          <p>
-            <strong>Tech used:</strong> HTML5, CSS3 (CSS variables, flexbox),
-            JavaScript (LocalStorage API), Git version control
-          </p>
+          <div class="project-content">
+            <button class="show-btn">Show Details</button>
+            <div class="project-details">
+              <p>
+                A portfolio website showcasing my skills, work, and projects using
+                HTML, CSS, and JavaScript.
+              </p>
+              <p><strong>Technologies used:</strong> HTML5, CSS3, JavaScript</p>
+            </div>
+          </div>
         </div>
-      </div>
 
       <div class="project">
-        <h3>InDiscover - Personalized Game Discovery Platform</h3>
-        <button class="show-btn">Show Details</button>
-        <div class="project-details">
-          <p>
-            <strong>Role:</strong> Lead API Developer & JavaScript Contributor
-          </p>
-          <p>
-            InDiscover is an interactive website that provides personalized game
-            recommendations through a dynamic quiz. As the lead API developer, I
-            managed the integration with the IGDB (Internet Game Database) API
-            to power our recommendation engine.
-          </p>
-          <p>
-            <strong>Tech Used:</strong> IGDB API, JavaScript, Node.js, Axios,
-            HTML/CSS
-          </p>
+        <div class="project-header">
+            <h3>Dynamic Blog Website</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-image">
+              <img src="images/placeholder-image.png" data-src="images/Blog-website-ss.png" alt="Dynamic Blog Website" class="lazy-image" />
+            </div>
+            <button class="show-btn">Show Details</button>
+            <div class="project-details">
+              <p>Full-featured blog platform with:</p>
+              <ul>
+                <li>Create/edit/delete posts</li>
+                <li>Image uploads (drag-drop or paste)</li>
+                <li>Mobile-responsive design</li>
+                <li>Local storage for data persistence</li>
+              </ul>
+              <p><strong>Tech used:</strong> HTML5, CSS3, JavaScript (LocalStorage API)</p>
+            </div>
+          </div>
         </div>
-      </div>
+
+      <div class="project">
+        <div class="project-header">
+            <h3>InDiscover - Game Discovery Platform</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-image">
+                <img src="images/placeholder-image.png" data-src="images\inDiscover-ss.png" alt="Dynamic Blog Website" class="lazy-image" />
+              </div>
+            <button class="show-btn">Show Details</button>
+            <div class="project-details">
+              <p><strong>Role:</strong> Lead API Developer & JavaScript Contributor</p>
+              <p>
+                InDiscover is an interactive website that provides personalized game
+                recommendations through a dynamic quiz. As the lead API developer, I
+                managed the integration with the IGDB API to power our recommendation engine.
+              </p>
+              <p><strong>Tech Used:</strong> JavaScript, HTML5, CSS3</p>
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" />
-        <p id="nameError" class="error-message"></p>
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" />
-        <p id="emailError" class="error-message"></p>
-
-        <label for="message">Message:</label>
-        <textarea name="message" id="message"></textarea>
-        <p id="messageError" class="error-message"></p>
-
-        <button type="submit">Send Message</button>
-        <p id="submitMessage" class="success-message"></p>
-      </form>
-    </section>
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" />
+            <p id="nameError" class="error-message"></p>
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" />
+            <p id="emailError" class="error-message"></p>
+          </div>
+    
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea name="message" id="message"></textarea>
+            <p id="messageError" class="error-message"></p>
+          </div>
+    
+          <button type="submit">Send Message</button>
+          <p id="submitMessage" class="success-message"></p>
+        </form>
+      </section>
 
     <!-- Footer Section -->
     <footer>
-      <p>&copy; 2025 Ahmed Rahim</p>
+      <p>&copy; 2025 Ahmed Rahim | Web Developer</p>
     </footer>
   </body>
 </html>

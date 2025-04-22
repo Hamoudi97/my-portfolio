@@ -156,6 +156,7 @@ h2::after {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  overflow: hidden;
 }
 
 .project-header {
@@ -185,6 +186,33 @@ h2::after {
   background-color: var(--project-details-background);
   border-radius: 5px;
   display: none;
+}
+
+.project-github {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.project-github a {
+  display: inline-flex;
+  align-items: center;
+  background-color: #363636;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-github a:hover {
+  background-color: #24292e;
+  transform: translateY(-2px);
+}
+
+.project-github i {
+  margin-right: 8px;
+  font-size: 18px;
 }
 
 .project-image {
@@ -227,7 +255,7 @@ h2::after {
 form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -253,6 +281,7 @@ textarea {
   font-family: inherit;
   font-size: 16px;
   transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -368,6 +397,10 @@ input:checked + .slider-round:before {
 }
 
 /* Skills Section */
+
+#skills {
+  position: relative;
+}
 .skills-container {
   margin-top: 30px;
 }
@@ -431,21 +464,24 @@ footer p {
 }
 
 /* Media Queries for Mobile Devices */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   header,
   footer {
     padding: 10px;
   }
 
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
   nav ul li {
-    display: block;
-    text-align: center;
-    margin: 5px 0;
+    margin: 8px 0;
   }
 
   section {
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    margin: 12px;
   }
   .theme-switch-dark {
     position: relative;
@@ -454,4 +490,20 @@ footer p {
     right: 0;
     margin-top: 10px;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-gif {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+}
+
+.goku-gif {
+  max-width: 60px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }

@@ -397,6 +397,10 @@ input:checked + .slider-round:before {
 }
 
 /* Skills Section */
+
+#skills {
+  position: relative;
+}
 .skills-container {
   margin-top: 30px;
 }
@@ -490,4 +494,16 @@ footer p {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.skill-gif {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+}
+
+.goku-gif {
+  max-width: 60px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
